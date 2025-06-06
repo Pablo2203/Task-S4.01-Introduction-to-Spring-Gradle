@@ -1,0 +1,44 @@
+{
+  "projectName": "S04T01N01-Gradle",
+  "buildTool": "Gradle",
+  "description": "Aplicación Spring Boot que expone endpoints para saludar.",
+  "port": 9001,
+  "javaVersion": "17",
+  "dependencies": [
+    {
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-web",
+      "version": "3.5.0"
+    },
+    {
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-test",
+      "scope": "test"
+    }
+  ],
+  "endpoints": [
+    {
+      "path": "/HelloWorld",
+      "method": "GET",
+      "parameters": {
+        "name": {
+          "type": "String",
+          "required": false,
+          "defaultValue": "Unknown"
+        }
+      },
+      "exampleResponse": "Hello Pablo! \\nYou are running a Gradle project"
+    },
+    {
+      "path": "/HelloWorld2/{name}",
+      "method": "GET",
+      "parameters": {
+        "name": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "exampleResponse": "Hello Pablo! \\nYou are running a Gradle project"
+    }
+  ]
+}
