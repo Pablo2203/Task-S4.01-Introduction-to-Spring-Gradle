@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>build.gradle.kts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.gradle.kts</font>
+</center></td></tr></table>
+<pre><span class="s0">plugins </span><span class="s1">{</span>
+	<span class="s0">id</span><span class="s1">(</span><span class="s2">&quot;org.springframework.boot&quot;</span><span class="s1">) </span><span class="s0">version </span><span class="s2">&quot;3.1.4&quot; </span><span class="s3">// Asegúrate de usar esta versión o la más compatible</span>
+	<span class="s0">id</span><span class="s1">(</span><span class="s2">&quot;io.spring.dependency-management&quot;</span><span class="s1">) </span><span class="s0">version </span><span class="s2">&quot;1.1.3&quot;</span>
+	<span class="s0">kotlin</span><span class="s1">(</span><span class="s2">&quot;jvm&quot;</span><span class="s1">) </span><span class="s0">version </span><span class="s2">&quot;1.9.10&quot; </span><span class="s3">// Esto es opcional, si necesitas Kotlin</span>
+	<span class="s0">kotlin</span><span class="s1">(</span><span class="s2">&quot;plugin.spring&quot;</span><span class="s1">) </span><span class="s0">version </span><span class="s2">&quot;1.9.10&quot; </span><span class="s3">// Esto también es opcional</span>
+<span class="s1">}</span>
+
+<span class="s0">group </span><span class="s1">= </span><span class="s2">&quot;cat.itacademy&quot;</span>
+<span class="s0">version </span><span class="s1">= </span><span class="s2">&quot;0.0.1-SNAPSHOT&quot;</span>
+<span class="s0">java</span><span class="s1">.</span><span class="s0">sourceCompatibility </span><span class="s1">= </span><span class="s0">JavaVersion</span><span class="s1">.</span><span class="s0">VERSION_17 </span><span class="s3">// Si usas Java 17 (ajusta si usas otra versión)</span>
+
+<span class="s0">repositories </span><span class="s1">{</span>
+	<span class="s0">mavenCentral</span><span class="s1">() </span><span class="s3">// Usa Maven Central para las dependencias</span>
+<span class="s1">}</span>
+
+<span class="s0">dependencies </span><span class="s1">{</span>
+	<span class="s3">// Spring Boot Web para las anotaciones de tu clase: @RestController, @GetMapping, etc.</span>
+	<span class="s0">implementation</span><span class="s1">(</span><span class="s2">&quot;org.springframework.boot:spring-boot-starter-web&quot;</span><span class="s1">)</span>
+
+	<span class="s3">// Dependencias de Kotlin (opcional, elimina si no usas Kotlin)</span>
+	<span class="s0">implementation</span><span class="s1">(</span><span class="s2">&quot;org.jetbrains.kotlin:kotlin-reflect&quot;</span><span class="s1">)</span>
+	<span class="s0">implementation</span><span class="s1">(</span><span class="s2">&quot;org.jetbrains.kotlin:kotlin-stdlib-jdk8&quot;</span><span class="s1">)</span>
+
+	<span class="s3">// Spring Boot Starter Test (para pruebas)</span>
+	<span class="s0">testImplementation</span><span class="s1">(</span><span class="s2">&quot;org.springframework.boot:spring-boot-starter-test&quot;</span><span class="s1">)</span>
+<span class="s1">}</span>
+
+<span class="s0">tasks</span><span class="s1">.</span><span class="s0">withType</span><span class="s1">&lt;</span><span class="s0">org</span><span class="s1">.</span><span class="s0">jetbrains</span><span class="s1">.</span><span class="s0">kotlin</span><span class="s1">.</span><span class="s0">gradle</span><span class="s1">.</span><span class="s0">tasks</span><span class="s1">.</span><span class="s0">KotlinCompile</span><span class="s1">&gt; {</span>
+	<span class="s0">kotlinOptions </span><span class="s1">{</span>
+		<span class="s0">freeCompilerArgs </span><span class="s1">= </span><span class="s0">listOf</span><span class="s1">(</span><span class="s2">&quot;-Xjsr305=strict&quot;</span><span class="s1">)</span>
+		<span class="s0">jvmTarget </span><span class="s1">= </span><span class="s2">&quot;17&quot; </span><span class="s3">// Cambia según la versión de Java en tu máquina</span>
+	<span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
