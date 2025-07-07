@@ -12,7 +12,7 @@ This project consists of creating a Spring Boot application with Gradle as the b
 
 ## 💻 Technologies
 
-- **Java** (minimum version 11)
+- **Java** (minimum version 21)
 - **Spring Boot** (latest stable version)
 - **Gradle**
 - **DevTools**
@@ -33,7 +33,7 @@ This project consists of creating a Spring Boot application with Gradle as the b
 
 ## 🛠️ Prerequisites
 
-- **Java Development Kit (JDK)** (version 11 or higher)
+- **Java Development Kit (JDK)** (version 21 or higher)
 - **Gradle** (latest version installed and configured on your system)
 - **A compatible IDE**, such as IntelliJ IDEA, Eclipse, etc.
 
